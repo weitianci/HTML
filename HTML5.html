@@ -277,7 +277,7 @@
   <code>transform:skew</code>：倾斜 <br>
   <code>transform:matrix</code>：矩阵(按照自己设定的矩阵公式实现变形) <br>
   <code>transform-style:preserve-3d</code>：实现3D变形 <br>
-  <code>transform-origin</code>：变形的起点</p>
+  <code>transform-origin</code>：变形的起点 参数：top bottom left right center...</p>
   
   <p>过渡动画 <br>
   <code>transition：all 1s linear 0s</code>：以下属性组合使用<br>
@@ -293,6 +293,7 @@
   <code>transition-timing-function:cubic-bezier</code>：执行自己设定的贝赛尔曲线 <br></p>
   
   <p>帧动画 <br>
+  <code>animation: move 3s infinite</code>：以下属性组合使用<br>
   <code>animation-name</code>：运动轨迹的名称 <br>
   <code>animation-duration</code>：运动的时长 <br>
   <code>animation-timing-function</code>：运动的方式（默认<code>ease</code>） <br>
@@ -307,7 +308,7 @@
 
 
 
-<pre class="prettyprint hljs-dark"><code class="hljs sqf"><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>(animation-<span class="hljs-built_in">name</span>调用这个动画){
+<pre class="prettyprint hljs-dark"><code class="hljs sqf"><div class="hljs-line">@keyframes <span class="hljs-built_in">move</span>(animation-name<span class="hljs-built_in">:move</span> 调用这个动画){
 </div><div class="hljs-line">    <span class="hljs-keyword">from</span>{
 </div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
 </div><div class="hljs-line">    }
@@ -315,7 +316,7 @@
 </div><div class="hljs-line">        <span class="hljs-comment">//结束的样式</span>
 </div><div class="hljs-line">    }
 </div><div class="hljs-line">}
-</div><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>{
+</div><div class="hljs-line">@keyframes <span class="hljs-built_in">move</span>{
 </div><div class="hljs-line">    <span class="hljs-number">0</span>%{
 </div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
 </div><div class="hljs-line">    }
