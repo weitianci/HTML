@@ -1,0 +1,448 @@
+<!DOCTYPE html><html><head><title>HTML5</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#html5">HTML5</a><ul>
+<li><a href="#语义化标签">语义化标签</a></li>
+<li><a href="#新增input元素的种类">新增input元素的种类</a></li>
+<li><a href="#表单新特性">表单新特性</a></li>
+<li><a href="#表单验证">表单验证</a></li>
+</ul>
+</li>
+<li><a href="#css-3">CSS 3</a><ul>
+<li><a href="#选择器">选择器</a></li>
+<li><a href="#样式属性">样式属性</a></li>
+<li><a href="#响应式布局开发">响应式布局开发</a></li>
+</ul>
+</li>
+<li><a href="#移动端zepto插件">移动端zepto插件</a></li>
+<li><a href="#响应式">响应式</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h1 id="html5">HTML5</h1>
+
+
+
+<h2 id="语义化标签">语义化标签</h2>
+
+<blockquote>
+  <p><code>hgroup</code>：对整个页面/页面中的一个内容区块的标题进行组合 <br>
+  <code>header</code>：一个内容区块或整个页面的头部部分 <br>
+  <code>main</code>：整个页面中间主体的部分 <br>
+  <code>footer</code>：页面的尾部 <br>
+  <code>nav</code>：页面中导航链接的部分 <br>
+  <code>article</code>：文章区域，定义可以独立于内容其余部分的完整独立内容块，<code>article</code>元素就是专门为摘要设计的，比如一篇文章 <br>
+  <code>aside</code>：表示<code>article</code>标签内容之外的，与<code>article</code>标签内容相关的辅助信息，<code>aside</code>元素应该被用于无关内容。（例如：广告）</p>
+  
+  <ul><li><p>如果你有你认为应该与主内容分开的内容，那么<code>aside</code>元素是你应该正确考虑使用的元素</p></li>
+  <li><p>询问你自己<code>aside</code>元素中的内容是否可以被独立开来而不会影响文档或者<code>section</code>中主内容的含义。</p></li>
+  <li><p>可以用在主要内容相关的引用，侧边栏，广告，<code>nav</code>元素组等。</p></li>
+  <li><p>简单来说：<code>aside</code>的内容如果被删除，剩下的内容仍然很合理 <br>
+  <code>figure</code>：</p></li>
+  <li><p>表示一段独立的流内容，一般表示文档主体流内容中的一个独立单元</p></li>
+  <li><p><code>figure</code>：配图区域 <br>
+  <code>figcaption</code>:</p></li>
+  <li><p>代表一个图例的说明</p></li>
+  <li><p>代表了<code>figure</code>元素的一个标题或者说是其相关解释</p></li>
+  <li><p>在使用<code>figcaption</code>时，它最好是<code>figure</code>块的第一个或者最后一个元素</p></li>
+  <li><p><code>mark</code>：标记</p></li>
+  <li><p><code>time</code>：时间标记</p></li>
+  <li><p><code>progress</code>：进度条</p></li>
+  </ul>
+  
+  <p><code>audio</code>：视频标签 <br>
+  属性 <br>
+  <code>duration</code>：播放的总时间（s） <br>
+  <code>currentTime</code>：当前已经播放的时间（s） <br>
+  <code>ended</code>：是否已经播放完成 <br>
+  <code>paused</code>：当前是否为暂停状态 <br>
+  <code>volume</code>：控制音量（0~1） <br>
+  方法 <br>
+  <code>pause()</code>：暂停 <br>
+  <code>play()</code>：播放 <br>
+  事件 <br>
+  <code>canplay</code>：可以正常播放（但是播放过程中可能出现卡顿） <br>
+  <code>canplaythrough</code>：资源加载完毕，可以顺畅的播放 <br>
+  <code>ended</code>：播放完成 <br>
+  <code>loadedmetadata</code>：资源的基础信息已经加载完成 <br>
+  <code>loadeddata</code>：整个资源都加载完成 <br>
+  <code>pause</code>：触发了暂停 <br>
+  <code>play</code>：触发了播放 <br>
+  <code>playing</code>：正在播放中</p>
+  
+  <p><code>video</code>：音频标签 <br>
+  <code>canvas</code>：图形绘制标签</p>
+  
+  <p>API： <br>
+  本地存储：<code>localStorage/sessionStorge</code> <br>
+  获取地理位置：<code>navigator.geolocation.getCurrentPosition</code> <br>
+  （调取手机内部的GPS定位系统获取当前手机所在地的经纬度以及精准度等） <br>
+  <code>websocket:socket.io</code>：客户端和服务器端新的传输方式（即时通讯IM系统基本上很多是基于它完成的）</p>
+</blockquote>
+
+
+
+<h2 id="新增input元素的种类">新增input元素的种类</h2>
+
+<blockquote>
+  <p><code>search</code>：搜索输入框 <br>
+  <code>tel</code>：电话号码输入框 <br>
+  <code>url</code>：输入<code>url</code>地址 <br>
+  <code>email</code>：邮件输入框</p>
+  
+  <p><code>number</code>：pc端-数字输入框    手机端-数字虚拟键盘 <br>
+  <code>range</code>：特定范围内的数值选择器（通过拖动滚动条改变一定范围内的数字）</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line">//通过滑动range改变number的值
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ageInp"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"65"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"rangeInp"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"65"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"25"</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript"></span>
+</div><div class="hljs-line"><span class="javascript">    rangeInp.oninput = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{</span>
+</div><div class="hljs-line"><span class="javascript">        <span class="hljs-keyword">let</span> val=<span class="hljs-keyword">this</span>.value;</span>
+</div><div class="hljs-line"><span class="javascript">        ageInp.value=val;</span>
+</div><div class="hljs-line"><span class="javascript">    }</span>
+</div><div class="hljs-line"><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+
+<blockquote>
+  <p>html： <br>
+  <code>step</code>：数值每次增加1 <br>
+  <code>max</code>：最大值65 <br>
+  <code>min</code>：最小值10 <br>
+  <code>value</code>：默认值25 <br>
+  <code>disabled</code>：取消默认样式（例如：取消<code>number</code>的上下箭头）</p>
+  
+  <p>js： <br>
+  <code>oninput</code>：当元素获得用户输入时同步运行脚本 <br>
+  <code>onChange</code>：选框改变时的事件 <br>
+  <code>onblur</code>：失去焦点 <br>
+  <code>onfocus</code>：获取焦点</p>
+  
+  <p><code>color</code>：颜色选取器 <br>
+  <code>datetime-local</code>：显示完整日期和时间 <br>
+  <code>date</code>：显示日期 <br>
+  <code>time</code>：显示时间 <br>
+  <code>month</code>：显示月 <br>
+  <code>week</code>：显示周</p>
+</blockquote>
+
+
+
+<h2 id="表单新特性">表单新特性</h2>
+
+<blockquote>
+  <p><code>placeholder</code>：输入框占位符，常用作输入提示，输入数据时，提示自动消失 <br>
+  <code>autocomplete</code>：是否保存用户输入值，默认为<code>on</code>，关闭提示选择<code>off</code> <br>
+  <code>autofocus</code>：自动聚焦 <br>
+  <code>required</code>：表单此项必填，不能为空 <br>
+  <code>pattern</code>：正则验证<code>pattern="\d{1,5}"</code> <br>
+  <code>form</code>属性只要加上<code>form</code>属性，表单元素可以放到页面的任意位置。 <br>
+  <code>formnovalidate</code>和<code>novalidate</code>：</p>
+  
+  <ul><li><p>它俩都表示不需要验证表单，直接提交：<code>novalidate</code>用于<code>form</code>标签；</p></li>
+  <li><p><code>formnovalidate</code>用于<code>submit</code>类型的提交按钮。</p></li>
+  </ul>
+</blockquote>
+
+
+
+<h2 id="表单验证">表单验证</h2>
+
+<blockquote>
+  <p><code>validity</code>对象，通过下面的<code>valid</code>可以查看验证是否通过 <br>
+  <code>oText.addEventListener</code>：(<code>“invalid",fn1,false</code>);</p>
+  
+  <p><code>outline:none</code>：当文本框获取焦点后取出浏览器默认的边框选中颜色 <br>
+  <code>valid</code>：验证通过 <br>
+  <code>#id.valid{color:#ccc}</code> <br>
+  <code>#id:valid+span:after{content:'格式正确'}</code> <br>
+  <code>invalid</code>：验证不通过 <br>
+  <code>#id.valid{color:red}</code> <br>
+  <code>#id:invalid+span:after{content:'格式不正确'}</code></p>
+  
+  <p><code>valueMissing</code>：输入值为空时 <br>
+  <code>typeMismatch</code>：控件值与预期类型不匹配 <br>
+  <code>patternMismatch</code>：输入值不满足<code>pattern</code>正则 <br>
+  <code>customError</code>：不符合自定义验证 <br>
+  <code>setCustomValidity();</code>：自定义验证</p>
+</blockquote>
+
+
+
+<h1 id="css-3">CSS 3</h1>
+
+
+
+<h2 id="选择器">选择器</h2>
+
+<blockquote>
+  <p><code>*</code> <br>
+  <code>id</code> <br>
+  <code>class</code> <br>
+  <code>tag</code> <br>
+  <code>selector1,selector2...</code>：群组选择器 <br>
+  <code>A .B{}</code>：后代选择器 <br>
+  <code>A.B{}</code>：即具备A也具备B（同级二次筛选） <br>
+  <code>A&gt;B{}</code>：子代选择器 <br>
+  <code>A+B{}</code>：A元素下的B元素 <br>
+  <code>A~B{}</code>：兄弟选择器 <br>
+  <code>A[name='']</code>：属性选择器 <br>
+  <code>A[name!='']</code>：除了某个元素的其它元素 <br>
+  <code>A[name^='']</code>：以某个元素开始 <br>
+  <code>A[name$='']</code>：以某个元素结尾 <br>
+  <code>A[name*='']</code>：包含哪个元素 <br>
+  <code>A:hover</code> <br>
+  <code>A:active</code> <br>
+  <code>A:after</code> <br>
+  <code>A:before</code> <br>
+  <code>A:nth-child(1)</code> <br>
+  <code>A:nth-last-child(1)</code> <br>
+  <code>A:nth-of-type()</code> <br>
+  <code>A:nth-last-of-type()</code> <br>
+  <code>A:not</code> <br>
+  <code>A:first-child</code> <br>
+  <code>A:last-child</code></p>
+</blockquote>
+
+<h2 id="样式属性">样式属性</h2>
+
+<blockquote>
+  <p><code>border-radius</code>：盒子圆角 <br>
+  <code>box-shadow</code>：盒子阴影 <br>
+  <code>text-shadow</code>：文本阴影 <br>
+  <code>background-color</code>：背景颜色 <br>
+  <code>background-image</code>：背景图片 <br>
+  <code>background-position</code>：获取图片的某一位置部分 <br>
+  <code>background-repet</code>：平铺 <br>
+  <code>background-norepet</code>：不平铺 <br>
+  <code>background-size:x,y</code>：宽高 <br>
+  <code>background-size:cover</code>：图片缩放覆盖所在容器不变形 <br>
+  <code>background-size:contain</code>：背景图覆盖整个内容区域（如果一边碰到容器边缘，则会停止覆盖，导致部分区域没有背景图） <br>
+  <code>background-attachment</code>：背景图固定地位 <br>
+  <code>background-clip</code>：背景图片裁切 <br>
+  <code>background-clip:border-box</code>：从边框开始裁切 <br>
+  <code>background-clip:padding-box</code>：从padding开始裁切 <br>
+  <code>background-clip:content-box</code>：从内容开始裁切 <br>
+  <code>background-origin</code>：设置背景图的起始点 <br>
+  <code>background-origin:border-box</code>：以边框为起始点 <br>
+  <code>background-origin:padding-box</code>：以边padding起始点 <br>
+  <code>background-origin:content-box</code>：以内容为起始点 <br>
+  <code>filter</code>：过滤</p>
+  
+  <p>CSS 3 动画和变形（2D/3D） <br>
+  <code>transform:translate(x,y,z)</code>：位移 <br>
+  <code>transform:scale</code>：缩放 <br>
+  <code>transform:rotate</code>：旋转 <br>
+  <code>transform:matrix</code>：矩阵(按照自己设定的矩阵公式实现变形) <br>
+  <code>transform-style:preserve-3d</code>：实现3D变形 <br>
+  <code>transform-origin</code>：变形的起点</p>
+  
+  <p>过渡动画 <br>
+  <code>transition-property:all/width</code>：那些属性样式发生改变执行过渡动画效果，默认all，所有样式属性改变都会执行这个过渡效果 <br>
+  <code>transition-timing-function</code>：动画运动的方式 <br>
+  <code>transition-timing-function:linear</code>（默认） <br>
+  <code>transition-timing-function:ease</code> <br>
+  <code>transition-timing-function:ease-in</code>  <br>
+  <code>transition-timing-function:ease-out</code>  <br>
+  <code>transition-timing-function:ease-in-out</code>  <br>
+  <code>transition-timing-function:cubic-bezier</code>：执行自己设定的贝赛尔曲线 <br>
+  <code>transition-delay</code>：设置延迟的时间，默认是<code>0s</code>不延迟，立即执行动画</p>
+  
+  <p>帧动画 <br>
+  <code>animation-name</code>：运动轨迹的名称 <br>
+  <code>animation-duration</code>：运动的时长 <br>
+  <code>animation-timing-function</code>：运动的方式（默认<code>ease</code>） <br>
+  <code>animation-delay</code>：延迟时间 <br>
+  <code>animation-iteration-count</code>：运动次数（默认1 <code>infinite</code>无限次运动） <br>
+  <code>animation-fill-mode</code>：运动完成后的状态 <br>
+  <code>animation-fill-mode:forwards</code>：帧动画完成后，让其停留在最后一帧的位置（元素会默认回到运动的起始位置） <br>
+  <code>animation-fill-mode:backwards</code>：当前帧动画如果有延迟时间，在延迟等待时间内，元素处于帧动画的第一帧位置 <br>
+  <code>animation-fill-mode:both</code>：让帧动画同时具备<code>forwards</code>和<code>backwards</code> <br>
+  设置运动轨迹</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs sqf"><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>(animation-<span class="hljs-built_in">name</span>设置的名称){
+</div><div class="hljs-line">    <span class="hljs-keyword">from</span>{
+</div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-keyword">to</span>{
+</div><div class="hljs-line">        <span class="hljs-comment">//结束的样式</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>{
+</div><div class="hljs-line">    <span class="hljs-number">0</span>%{
+</div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-number">50</span>%{
+</div><div class="hljs-line">        <span class="hljs-comment">//过程中的样式</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-number">100</span>%{
+</div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<blockquote>
+  <p>CSS 3 中的新盒子模型 <br>
+  <code>columns</code>：多列布局 <br>
+  <code>flex</code>：弹性盒子模型 <br>
+  <code>box-sizing:border-box</code>：代表整个盒子的宽高 <br>
+  <code>box-sizing:padding-box</code>：代表盒子的大小不变padding的宽高 <br>
+  <code>box-sizing:content-box</code>：代表盒子大小不变内容的宽高（默认值） <br>
+  <code>perspective</code>：视距（实现3D动画必用的属性） <br>
+  <code>@media</code>：媒体查询（实现响应式布局的一种方案） <br>
+  <code>@font-face</code>：导入字体图标</p>
+</blockquote>
+
+
+
+<h2 id="响应式布局开发">响应式布局开发</h2>
+
+<blockquote>
+  <p>响应式布局：</p>
+  
+  <ul><li><p>在不同尺寸的设备上都能良好的展示，这就是响应式布局设计（Responsive Layout） <br>
+  如何实现响应式布局开发：</p></li>
+  <li><p>最常用的方案：REM等比缩放响应式布局 <br>
+  做移动端<code>H5</code>开发，首先加<code>meta</code>标签 <br>
+  <code>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</code> <br>
+  <code>rem</code>和<code>px</code>都是样式单位，<code>px</code>是固定单位，<code>rem</code>是相对单位（相对与当前页面根元素<code>html</code>的<code>font-size</code>字体设定的单位，如果<code>font-size=100px</code>那么<code>1rem=100px</code>,所有设置<code>rem</code>的元素都会跟随放大缩小） <br>
+  真实项目中设计师给我们一套设计稿（常用的尺寸：640*1136、750*1334、640*960….），拿到设计稿后，我们严格按照设计稿中的尺寸去编写样式</p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">html</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-number">100px</span>;}
+</div></code></pre>
+
+<blockquote>
+  <p>接下来写样式，把测量出来的px都除以100变为rem，所有的单位基于rem来搞=&gt;假设设计稿是750，也就相当于750的设备下，1rem=100px <br>
+  我们页面运行在320的设备上，我们需要修改html的字体大小，以此实现页面跟着整体缩放：320/750*100=&gt;当前设备上html的字体大小</p>
+  
+  <p>公司中的产品形态 <br>
+  1、<code>PC</code>端（全屏页面需要宽度自适应，但是一般都是固定宽度的） <br>
+  2、<code>PC</code>+移动端 用同一套项目（简单的页面，例如：产品介绍，公司展示类的官网等） <br>
+  3、移动端（移动端设备尺寸差异较大，需要做响应式布局开发） <br>
+  嵌入到<code>APP</code>中的<code>H5</code>、微信中分享出来的<code>H5</code>、微信公众号、小程序、靠浏览器访问的<code>H5</code> <br>
+  4、<code>RN（Reat Native）/ ionic / cordova...</code> <code>Js</code>开发<code>APP</code>的框架，使用<code>JS</code>代码开发APP，最后框架会把代码转换为安卓和<code>IOS</code>需要的代码</p>
+</blockquote>
+
+
+
+<h1 id="移动端zepto插件">移动端zepto插件</h1>
+
+<blockquote>
+  <p><code>zepto</code>和<code>JQ</code>的区别： <br>
+  1、<code>zepto</code>没有考虑浏览器的兼容，专门为移动端开发的小型类库，也仅仅是把<code>JQ</code>中的一些常规方法实现了，很多方法也没有实现（例如:<code>slideDown/show...</code>在<code>zepto</code>中没有）为了保证<code>zepto</code>的体积足够小 <br>
+  2、<code>zepto</code>中提供了移动端专门操作的事件方法（例如：<code>tap</code>等），这些方法都是基于移动端的<code>touch</code>和<code>gesture</code>事件模型封装好的方法，<code>JQ</code>中并没有提供这些方法=&gt;<code>zepto</code>更适合移动端 <br>
+  <code>$class.tap(ev=&gt;{});</code>：点击 <br>
+  <code>$class.singleTap(ev=&gt;{});</code>：单击 <br>
+  <code>$class.doubleTap(ev=&gt;{});</code>：双击 <br>
+  <code>$class.longTap(ev=&gt;{});</code>：长按 <br>
+  <code>$class.swipe(ev=&gt;{});</code>：滑动 <br>
+  <code>$class.swipeLeft(ev=&gt;{});</code>：左滑动 <br>
+  <code>$class.swipeRight(ev=&gt;{});</code>：右滑动 <br>
+  <code>$class.swipeUp(ev=&gt;{});</code>：上滑动 <br>
+  <code>$class.swipeDown(ev=&gt;{});</code>：下滑动 <br>
+  <code>$class.pinchIn(ev=&gt;{});</code>：缩小 <br>
+  <code>$class.pinchOut(ev=&gt;{});</code>：放大</p>
+</blockquote>
+
+
+
+<h1 id="响应式">响应式</h1>
+
+<blockquote>
+  <p><code>viewport</code>：视口</p>
+  
+  <p><code>layout viewport</code>：布局页面视口（和开发<code>CSS</code>等相关） <br>
+  <code>visual viewport</code>：手机视口 <br>
+  <code>ideal viewport</code>：理想视口</p>
+  
+  <p><code>HTML</code>的宽度&gt;手机宽度=&gt;把页面整体缩放 <br>
+  页面内容宽度&gt;<code>HTML</code>页面的宽度=&gt;出现横向滚动条</p>
+  
+  <p>真实移动端项目开发中，一般是不会出现横向滚动条的，想让他出现横向滚动条就要保证内容的宽度不会超过<code>HTML</code>页面的宽度 <br>
+  移动端开发手机设备宽度不一定-&gt;<code>HTML</code>页面的宽度也不一定-&gt;所以内容的宽度一般也不是固定的（也就是所谓的百分比宽度） <br>
+  移动端开发（流式响应式布局方案）：外层盒子的宽度一般都是百分比设定的，很少有些固定的值（里面具体的小元素宽度可以固定）</p>
+  
+  <p>平时处理的移动端项目： <br>
+  1、<code>PC</code>端和移动端公用一套项目（结构相对简单，一般都是展示类的企业站） <br>
+  【设计师一般只给一套设计稿】 <br>
+  开发流程：<code>PC</code>端（一般宽度都是自适应，具体情况有所不同）-&gt;移动端（使用<code>@media</code>媒体查询，把不同设备上不合适的样式进行修改） <br>
+  我们可以把<code>@media</code>理解为<code>JS</code>中的条件判断，在不同条件使用不同的<code>CSS</code>样式进行渲染 <br>
+  <code>@media</code>[媒体设备] <code>and</code>[媒体条件] <code>and</code>[媒体条件]…… <br>
+  <code>@media all</code>：所有设备 <br>
+  <code>@media screen</code>：所有屏幕设备（<code>PC</code>+电脑） <br>
+  <code>@media screen and(orientation:portrait)</code>：条件匹配横屏变竖屏（宽&lt;高） <br>
+  <code>@media screen and(orientation:landscape)</code>：条件匹配竖屏变横屏（宽&gt;高） <br>
+  <code>@media print</code>：打印设备</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs less"><div class="hljs-line"><span class="hljs-selector-tag">media</span> <span class="hljs-keyword">all</span> <span class="hljs-selector-tag">and</span>(<span class="hljs-attribute">max-width</span>:<span class="hljs-number">780px</span>){
+</div><div class="hljs-line">    <span class="hljs-comment">//页面宽度最大是780px的时候使用以下样式</span>
+</div><div class="hljs-line">    <span class="hljs-selector-class">.box</span>{
+</div><div class="hljs-line">        <span class="hljs-attribute">width</span>:<span class="hljs-number">200px</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-selector-tag">media</span> <span class="hljs-keyword">all</span> <span class="hljs-selector-tag">and</span>(<span class="hljs-attribute">max-width</span>:<span class="hljs-number">640px</span>){
+</div><div class="hljs-line">    <span class="hljs-comment">//页面宽度最大是640px的时候使用以下样式</span>
+</div><div class="hljs-line">    <span class="hljs-selector-class">.box</span>{
+</div><div class="hljs-line">        <span class="hljs-attribute">width</span>:<span class="hljs-number">150px</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-selector-tag">media</span> <span class="hljs-keyword">all</span> <span class="hljs-selector-tag">and</span>(<span class="hljs-attribute">max-width</span>:<span class="hljs-number">480px</span>){
+</div><div class="hljs-line">    <span class="hljs-comment">//页面宽度最大是480px的时候使用以下样式</span>
+</div><div class="hljs-line">    <span class="hljs-selector-class">.box</span>{
+</div><div class="hljs-line">        <span class="hljs-attribute">width</span>:<span class="hljs-number">200px</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<blockquote>
+  <p>2、<code>PC</code>端和移动端是分开的两套不同项目 <br>
+  【设计师一般会给两套设计稿（<code>PC</code>+移动）】</p>
+  
+  <ul><li><p><code>PC</code>端单独做（不需要考虑移动端响应式）：固定式布局</p></li>
+  <li><p>移动端单独做（只需要考虑移动端的响应式适配）：响应式布局 <br>
+  依然可以基于<code>@media</code>来处理（麻烦一些） <br>
+  固定布局（<code>viewport</code>=&gt;<code>width=320px</code>）；按照设计稿把320尺寸的写好即可（所有的尺寸都可以固定，而且都是设计稿的一半，因为设计稿是大一倍的），在其它的设备上让<code>320px</code>的页面剧中展示即可 <br>
+  <code>scale</code>等比缩放布局（严格按照设计稿的尺寸来写样式，没有自适应宽度，都是固定值，在其它设备上，首先获取设备的宽度，让其除以设计稿的宽度，然后让原始写好的页面按照这个比例整体缩小即可）=&gt;会导致一些问题例如字体变模糊 <br>
+  <code>rem</code>等比缩放：它是参考<code>scale</code>，只是用的<code>rem</code>单位来实现的等比缩放（严格按照设计稿的尺寸编写，但是一般宽度让他自适应，其余的值可以写固定值-&gt;在编写<code>css</code>样式的时候，我们把所有的<code>px</code>单位都换算成<code>rem</code>单位-&gt;当加载页面的时候，根据当前设备的尺寸除以设计稿，根据比例动态调整<code>rem</code>和<code>px</code>的换算比例） <br>
+  <code>CSS 3</code>中提供了<code>flex-box</code>伸缩盒子模型，基于这个属性，可以让某些效果处理起来更加方便</p></li>
+  <li><p>设计师给的移动端设计稿一般都是：640*1136（980或者不确定高度）、750*1334… <br>
+  为什么设计稿比参照的手机大一倍？ <br>
+  目的是保证切下来的素材资源图片都是大图 <br>
+  为什么保证大图？ <br>
+  因为很多手机都是二倍及三倍屏幕像素密度比（DPR）的 <br>
+  即使给的是二倍设计稿，但是部分手机的设备尺寸要大于设计稿的一半，有的手机是3倍<code>DPR</code>的，这样就导致一个问题：部分图片还是会变的模糊一些，此时我们找设计师单独的把模糊图片要一张大图即可</p></li>
+  </ul>
+  
+  <p>在<code>PC</code>端，我们开发的<code>HTML</code>页面运行在浏览器中，浏览器有多宽（一般浏览器代表设备的宽度）<code>HTML</code>就有多宽，也就是在浏览器宽度的视口中渲染和呈现我们的页面 <br>
+  移动端和<code>PC</code>端的区别：不管移动端设备（代指打开的浏览器）的宽度是多少，<code>HTMl</code>页面的宽度是980（或者1024）=&gt;导致的问题：如果在设备窗口中想把整个页面完全呈现出来（小窗口中完全展示大页面），我们只能把大页面进行缩放，<code>HTML</code>页面缩放了，那么页面中所有内容都缩放了 <br>
+  解决方案 <br>
+  只要让<code>H5</code>页面的宽度和手机设备宽度保持一致即可，就不会出现手机渲染页面的时候把页面缩放的事情了 <br>
+  <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> <br>
+  此<code>meta</code>标签就是在设置子<code>VP</code>（视口）的规则 <br>
+  <code>width=device-width</code>：让<code>HTML</code>页面的宽度等于设备的宽度 <br>
+  <code>height=device-height</code>：设置<code>HTML</code>页面的高度（一般不用） <br>
+  <code>initial-scale=1.0</code>：初始缩放比例是1：1（也就是既不放大也不缩小） <br>
+  <code>user-scalable=no</code>：禁止用户手动缩放（部分安卓机中只设置）<code>user-scalable</code>是不起作用的，需要同这两个（<code>maximum-scale/minimum-scale</code>）一起使用 <br>
+  <code>maximum-scale=1.0</code>：设置最大的缩放比例1：1（既不放大也不缩小） <br>
+  <code>minimum-scale=1.0</code>：设置最小的缩放比例1：1（既不放大也不缩小）</p>
+</blockquote></div></body></html>
