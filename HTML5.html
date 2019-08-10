@@ -280,22 +280,24 @@
   <code>transform-origin</code>：变形的起点</p>
   
   <p>过渡动画 <br>
+  <code>transition：all 1s linear 0s</code>：以下属性组合使用<br>
   <code>transition-property:all/width</code>：那些属性样式发生改变执行过渡动画效果，默认all，所有样式属性改变都会执行这个过渡效果 <br>
+  <code>transition-duration</code>：动画持续的时间<br>
+  <code>transition-delay</code>：设置延迟的时间，默认是<code>0s</code>不延迟，立即执行动画<br>
   <code>transition-timing-function</code>：动画运动的方式 <br>
   <code>transition-timing-function:linear</code>（默认） <br>
   <code>transition-timing-function:ease</code> <br>
   <code>transition-timing-function:ease-in</code>  <br>
   <code>transition-timing-function:ease-out</code>  <br>
   <code>transition-timing-function:ease-in-out</code>  <br>
-  <code>transition-timing-function:cubic-bezier</code>：执行自己设定的贝赛尔曲线 <br>
-  <code>transition-delay</code>：设置延迟的时间，默认是<code>0s</code>不延迟，立即执行动画</p>
+  <code>transition-timing-function:cubic-bezier</code>：执行自己设定的贝赛尔曲线 <br></p>
   
   <p>帧动画 <br>
   <code>animation-name</code>：运动轨迹的名称 <br>
   <code>animation-duration</code>：运动的时长 <br>
   <code>animation-timing-function</code>：运动的方式（默认<code>ease</code>） <br>
   <code>animation-delay</code>：延迟时间 <br>
-  <code>animation-iteration-count</code>：运动次数（默认1 <code>infinite</code>无限次运动） <br>
+  <code>animation-iteration-count</code>：运动次数（默认1 <code>infinite</code>循环运动） <br>
   <code>animation-fill-mode</code>：运动完成后的状态 <br>
   <code>animation-fill-mode:forwards</code>：帧动画完成后，让其停留在最后一帧的位置（元素会默认回到运动的起始位置） <br>
   <code>animation-fill-mode:backwards</code>：当前帧动画如果有延迟时间，在延迟等待时间内，元素处于帧动画的第一帧位置 <br>
@@ -305,7 +307,7 @@
 
 
 
-<pre class="prettyprint hljs-dark"><code class="hljs sqf"><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>(animation-<span class="hljs-built_in">name</span>设置的名称){
+<pre class="prettyprint hljs-dark"><code class="hljs sqf"><div class="hljs-line">keyframes <span class="hljs-built_in">name</span>(animation-<span class="hljs-built_in">name</span>调用这个动画){
 </div><div class="hljs-line">    <span class="hljs-keyword">from</span>{
 </div><div class="hljs-line">        <span class="hljs-comment">//开始的样式</span>
 </div><div class="hljs-line">    }
