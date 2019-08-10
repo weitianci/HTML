@@ -201,34 +201,60 @@
   <code>A[name^='']</code>：以某个元素开始 <br>
   <code>A[name$='']</code>：以某个元素结尾 <br>
   <code>A[name*='']</code>：包含哪个元素 <br>
-  <code>A:hover</code> <br>
-  <code>A:active</code> <br>
+  <code>A:hover</code>：选择所有执行鼠标悬停的元素 <br>
+  <code>A:active</code>：选择所有执行鼠标点击的元素 <br>
   <code>A:after</code> <br>
   <code>A:before</code> <br>
-  <code>A:nth-child(1)</code> <br>
-  <code>A:nth-last-child(1)</code> <br>
-  <code>A:nth-of-type()</code> <br>
-  <code>A:nth-last-of-type()</code> <br>
-  <code>A:not</code> <br>
-  <code>A:first-child</code> <br>
-  <code>A:last-child</code></p>
+  <code>A:first-child</code>选择第1个元素 <br>
+  <code>A:last-child</code>选择最后1个元素</br>
+  <code>A:nth-child(n)</code>：选择第n个元素 <br>
+  <code>A:nth-last-child(n)</code>：选择倒数第n个元素 <br>
+  <code>A B:first-of-type</code>：A元素下所有B元素的第1个 <br>
+  <code>A B:last-of-type</code>：A元素下所有B元素的最后1个 <br>
+  <code>A B:nth-of-type(n)</code>：A元素下B元素的第n个 <br>
+  <code>A B:nth-last-of-type(not)</code>：A元素下B元素的倒数第n个 <br>
+  <code></code>
+  <br>
+  <code></code>
+  <br>
+  <code></code>
+  <br>
+  <code></code>
+  <br>
+  <code></code>
+  <br>
+  <!-- E:only-child 
+  E:only-of-type 
+  E:empty 
+  E:checked 
+  E:enabled 
+  E:disabled 
+  E::selection  -->
+  <code>A:not(s)</code>：选择内容中没有S字符的元素 <br>
+  <code>A:empty</code>：选择所有空内容的元素 <br>
 </blockquote>
 
 <h2 id="样式属性">样式属性</h2>
 
 <blockquote>
   <p><code>border-radius</code>：盒子圆角 <br>
-  <code>box-shadow</code>：盒子阴影 <br>
+  参数：1、左上弧度 2、右上弧度 3、左下弧度 4、右下弧度 <br>
   <code>text-shadow</code>：文本阴影 <br>
+  <code>box-shadow</code>：盒子阴影 <br>
+  参数：1、右偏移 2、下偏移 3、模糊 4、大小 5、颜色 6、内容外阴影<br>
+  <code>box-sizing</code>：<br>
+  <code>box-sizing:border-box</code>：从外边框到对面的外边框的距离；包含border、padding、width<br>
+  <code>box-sizing:content-box</code>：正常的内容宽度<br>
+  <code>box-sizing:inherit</code>：继承<br>
   <code>background-color</code>：背景颜色 <br>
   <code>background-image</code>：背景图片 <br>
+  <code>background-attachment</code>：背景图固定地位 <br>
   <code>background-position</code>：获取图片的某一位置部分 <br>
   <code>background-repet</code>：平铺 <br>
   <code>background-norepet</code>：不平铺 <br>
   <code>background-size:x,y</code>：宽高 <br>
   <code>background-size:cover</code>：图片缩放覆盖所在容器不变形 <br>
   <code>background-size:contain</code>：背景图覆盖整个内容区域（如果一边碰到容器边缘，则会停止覆盖，导致部分区域没有背景图） <br>
-  <code>background-attachment</code>：背景图固定地位 <br>
   <code>background-clip</code>：背景图片裁切 <br>
   <code>background-clip:border-box</code>：从边框开始裁切 <br>
   <code>background-clip:padding-box</code>：从padding开始裁切 <br>
