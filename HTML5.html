@@ -271,12 +271,14 @@
   <code>filter</code>：过滤</p>
   
   <p>CSS 3 动画和变形（2D/3D） <br>
-  <code>transform:translate(x,y,z)</code>：位移 <br>
+  左手伸出大拇指，大拇指的方向为X轴正方向，四指的方向为Y轴正方向<br>
+  <code>transform:translate(x,y)</code>：位移(单位：px) <br>
   <code>transform:scale</code>：缩放 <br>
-  <code>transform:rotate</code>：旋转 <br>
-  <code>transform:skew</code>：倾斜 <br>
+  <code>transform:rotate(x,y,z)</code>：旋转(单位：deg) <br>
+  <code>transform:skew(x,y)</code>：倾斜(单位：deg) <br>
   <code>transform:matrix</code>：矩阵(按照自己设定的矩阵公式实现变形) <br>
-  <code>transform-style:preserve-3d</code>：实现3D变形 <br>
+  <code>transform-style:preserve-3d</code>：实现3D变形(本元素下的子元素为3D效果) <br>
+  <code>perspective: 3000px</code>：视距(2000-3000,在有transform-style:preserve-3d属性的父元素添加)<br>
   <code>transform-origin</code>：变形的起点 参数：top bottom left right center...</p>
   
   <p>过渡动画 <br>
@@ -422,9 +424,11 @@
   <code>@media</code>[媒体设备] <code>and</code>[媒体条件] <code>and</code>[媒体条件]…… <br>
   <code>@media all</code>：所有设备 <br>
   <code>@media screen</code>：所有屏幕设备（<code>PC</code>+电脑） <br>
-  <code>@media screen and(orientation:portrait)</code>：条件匹配横屏变竖屏（宽&lt;高） <br>
-  <code>@media screen and(orientation:landscape)</code>：条件匹配竖屏变横屏（宽&gt;高） <br>
-  <code>@media print</code>：打印设备</p>
+  <code>@media screen and (orientation:portrait)</code>：条件匹配横屏变竖屏（宽&lt;高） <br>
+  <code>@media screen and (orientation:landscape)</code>：条件匹配竖屏变横屏（宽&gt;高） <br>
+  <code>@media screen and (min-width:1000px)</code>：屏幕大于1000px时改变样式<br>
+  <code>@media screen and (max-width:1000px)</code>：屏幕小于1000px时改变样式<br>
+  <code>@media print</code>：打印设备<br></p>
 </blockquote>
 
 
